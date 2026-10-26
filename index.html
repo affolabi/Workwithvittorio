@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vittorio — Brand & Product Designer</title>
+  <meta name="description" content="Hi, I’m Vittorio. I turn ideas into brands, digital products, and things people love to interact with.">
+  <link rel="icon" type="image/png" href="assets/flame.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=50">
+</head>
+<body data-theme="light">
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-spacer" aria-hidden="true"></div>
+
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#home" class="nav-item active" data-nav="home">/home</a>
+        <a href="#me" class="nav-item" data-nav="me">/me</a>
+        <a href="#mosaic" class="nav-item" data-nav="mosaic">/mosaic</a>
+        <a href="#experiments" class="nav-item" data-nav="experiments">/experiments</a>
+        <a href="#resume" class="nav-item nav-locked" data-nav="resume" id="nav-resume-btn">
+          /résumé <span class="lock-icon" aria-label="locked">
+            <svg viewBox="0 0 24 24" width="11" height="11" fill="currentColor">
+              <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"/>
+            </svg>
+          </span>
+        </a>
+        <a href="mailto:workwithvittorio@gmail.com" class="nav-item" data-nav="contact">/contact</a>
+        
+        <!-- Theme & Audio Controls -->
+        <button class="icon-btn theme-toggle" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="4"></circle>
+            <line x1="12" y1="2" x2="12" y2="4"></line>
+            <line x1="12" y1="20" x2="12" y2="22"></line>
+            <line x1="4.93" y1="4.93" x2="6.34" y2="6.34"></line>
+            <line x1="17.66" y1="17.66" x2="19.07" y2="19.07"></line>
+            <line x1="2" y1="12" x2="4" y2="12"></line>
+            <line x1="20" y1="12" x2="22" y2="12"></line>
+            <line x1="4.93" y1="19.07" x2="6.34" y2="17.66"></line>
+            <line x1="17.66" y1="6.34" x2="19.07" y2="4.93"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <span class="nav-divider" aria-hidden="true">|</span>
+
+        <button class="icon-btn audio-toggle" id="audio-toggle-btn" aria-label="Toggle Ambient Audio" title="Ambient Chill Beats">
+          <svg class="play-icon" viewBox="0 0 24 24" width="10" height="10" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <svg class="pause-icon" viewBox="0 0 24 24" width="10" height="10" fill="currentColor" style="display:none;">
+            <rect x="6" y="4" width="4" height="16"></rect>
+            <rect x="14" y="4" width="4" height="16"></rect>
+          </svg>
+          <span class="audio-soundwave" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+      </nav>
+
+      <!-- Social Links -->
+      <div class="social-links">
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (Twitter)" title="X (Twitter)">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+            <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 1 0-.01-3.05 1.53 1.53 0 0 0 .01 3.05m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+          </svg>
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Body Wrapper (/home view) -->
+  <main class="hero-only-wrapper" id="home-view">
+    <section class="hero-section" id="home">
+      <div class="hero-stage">
+
+        <!-- Avatar Squircle Centerpiece with Pinned Stickers -->
+        <div class="avatar-centerpiece">
+          <div class="speech-pill" id="speech-pill" role="button" tabindex="0" title="Click me!">
+            <span>Hey 👋</span>
+          </div>
+
+          <div class="avatar-card-wrapper">
+            <div class="avatar-squircle" id="avatar-container">
+              <img src="assets/avatar_square.png" alt="Vittorio" class="avatar-image" draggable="false">
+            </div>
+
+            <!-- Pinned Heart Sticker (Top Right of Avatar) -->
+            <div class="sticker-badge badge-heart" id="sticker-heart" title="Drag me!">
+              <img src="assets/heart.png" alt="Heart sticker" draggable="false">
+            </div>
+
+            <!-- Pinned Flame Sticker (Bottom Left of Avatar) -->
+            <div class="sticker-badge badge-flame" id="sticker-flame" title="Drag me!">
+              <img src="assets/flame.png" alt="Flame sticker" draggable="false">
+            </div>
+          </div>
+
+          <!-- Code Snippet Bio -->
+          <div class="code-snippet-bio">
+            <div class="code-line">Const Me = { Name: "Vittorio",</div>
+            <div class="code-line">Pronouns: "<span class="pronoun-muted">he.is</span>(<span class="pronoun-muted">HIM</span>)" };</div>
+          </div>
+        </div>
+
+        <!-- Bio Editorial Statement (Exact 6-line arrangement & tracking from design) -->
+        <div class="bio-editorial">
+          <p class="bio-paragraph">
+            <span class="bio-line">An <span class="skill-underline">award-winning designer</span> turning ideas into brands, digital products, and things people love to interact with.</span>
+            <span class="bio-line">I’m a <span class="skill-underline">brand and product designer</span> with a soft spot for ambitious ideas, thoughtful details, and</span>
+            <span class="bio-line">making complicated things feel simple. From <span class="skill-underline">shaping identities</span> to <span class="skill-underline">designing digital experiences</span>, I</span>
+            <span class="bio-line">work at the intersection of strategy, design, and technology to help ideas become something real.</span>
+            <span class="bio-line">Lately, I’ve been getting closer to the code, experimenting with AI, and exploring just how much</span>
+            <span class="bio-line">one person can create. This is where some of that work lives.</span>
+          </p>
+        </div>
+
+        <!-- Bottom Dock & Email Bar -->
+        <div class="dock-bar-row">
+          <div class="mac-dock" id="mac-dock" role="toolbar" aria-label="Quick launch dock">
+            <div class="dock-item" data-app="terminal" data-title="Dev Terminal">
+              <img src="assets/icons/dock_cat.png" alt="Terminal" class="dock-icon">
+              <span class="dock-tooltip">Dev Terminal</span>
+            </div>
+            <div class="dock-item" data-app="web" data-title="Web Projects">
+              <img src="assets/icons/dock_web.png" alt="Web Projects" class="dock-icon">
+              <span class="dock-tooltip">Web Projects</span>
+            </div>
+            <div class="dock-item" data-app="pepe" data-title="Culture & Memes">
+              <img src="assets/icons/dock_pepe.png" alt="Culture & Memes" class="dock-icon">
+              <span class="dock-tooltip">Culture & Memes</span>
+            </div>
+            <div class="dock-item" data-app="crypto" data-title="Web3 / Crypto">
+              <img src="assets/icons/dock_cube.png" alt="Web3" class="dock-icon">
+              <span class="dock-tooltip">Web3 / Crypto</span>
+            </div>
+            <div class="dock-item" data-app="betboro" data-title="Betboro App">
+              <img src="assets/icons/dock_betboro.png" alt="Betboro" class="dock-icon">
+              <span class="dock-tooltip">Betboro App</span>
+            </div>
+            <div class="dock-item" data-app="dex" data-title="DeFi Protocol">
+              <img src="assets/icons/dock_dex.png" alt="DeFi Protocol" class="dock-icon">
+              <span class="dock-tooltip">DeFi Protocol</span>
+            </div>
+            <div class="dock-item" data-app="gaming" data-title="Gaming / Casino">
+              <img src="assets/icons/dock_mb.png" alt="Gaming" class="dock-icon">
+              <span class="dock-tooltip">Gaming / Casino</span>
+            </div>
+
+            <div class="dock-separator" aria-hidden="true"></div>
+
+            <div class="dock-item" data-app="cards" data-title="Payday Cards">
+              <img src="assets/icons/dock_coin.png" alt="Payday Cards" class="dock-icon">
+              <span class="dock-tooltip">Payday Cards</span>
+            </div>
+            <div class="dock-item" data-app="telegram" data-title="Telegram @0xvitt">
+              <img src="assets/icons/dock_telegram.png" alt="Telegram" class="dock-icon">
+              <span class="dock-tooltip">Telegram</span>
+            </div>
+            <div class="dock-item" data-app="email" data-title="Say Hello">
+              <img src="assets/icons/dock_mail.png" alt="Send Email" class="dock-icon">
+              <span class="dock-tooltip">Say Hello</span>
+            </div>
+          </div>
+
+          <a href="mailto:workwithvittorio@gmail.com" class="email-cta-link">
+            <span class="email-text">workwithvittorio@gmail.com</span>
+            <svg class="email-arrow" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 14l5-5-5-5"/>
+              <path d="M4 20v-7a4 4 0 0 1 4-4h12"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Exact Body Section from BODY.png -->
+    <section class="portfolio-body-section" id="works">
+      <div class="body-inner-featured">
+
+        <!-- Intro Paragraph + Right Heart Sticker -->
+        <div class="body-intro-row">
+          <p class="body-intro-text">
+            <span class="body-intro-line">Every project starts with a conversation, a challenge, and an</span>
+            <span class="body-intro-line">idea worth building. I enjoy working closely with founders to</span>
+            <span class="body-intro-line">turn ideas into brands and digital experiences that feel</span>
+            <span class="body-intro-line">intentional, memorable, and genuinely useful. Here are a few</span>
+            <span class="body-intro-line">projects from my kitchen</span>
+          </p>
+
+          <div class="body-heart-sticker" aria-hidden="true">
+            <img src="assets/heart.png" alt="" draggable="false">
+          </div>
+        </div>
+
+        <!-- Category Filter Row -->
+        <div class="body-filter-tabs" role="tablist" aria-label="Project categories">
+          <span class="filter-tab active">All<sup>12</sup></span>
+          <span class="filter-tab">Mobile Apps<sup>4</sup></span>
+          <span class="filter-tab">campagns<sup>2</sup></span>
+          <span class="filter-tab">Websites<sup>6</sup></span>
+          <span class="filter-tab filter-tab-motion">Motion graphics<sup>10</sup></span>
+        </div>
+
+        <!-- Featured 2-Column Staggered Cards (6 Big Cards: 3 Left, 3 Right) -->
+        <div class="featured-staggered-grid">
+          <!-- Left Column (3 Cards) -->
+          <div class="featured-col featured-col-left">
+            <!-- Card 1: Top-Left (#C4C4C4, 748x671) -->
+            <div class="featured-item featured-tl">
+              <div class="featured-rect rect-tl"></div>
+              <div class="featured-links links-tl">
+                <a href="#case-study" class="featured-link">
+                  <span>Read Case Study</span>
+                  <span class="featured-arrow">→</span>
+                </a>
+                <span class="featured-divider" aria-hidden="true"></span>
+                <a href="#live-site" class="featured-link">
+                  <span>view live site</span>
+                  <span class="featured-arrow">→</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2: Middle-Left (#D9D9D9, 775x837) -->
+            <div class="featured-item featured-bl">
+              <div class="featured-rect rect-bl">
+                <span class="rect-bl-number">1</span>
+              </div>
+              <div class="featured-links links-bl">
+                <a href="#case-study" class="featured-link">
+                  <span>Read Case Study</span>
+                  <span class="featured-arrow">→</span>
+                </a>
+                <span class="featured-divider" aria-hidden="true"></span>
+                <a href="#live-site" class="featured-link">
+                  <span>view live site</span>
+                  <span class="featured-arrow">→</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 3: Bottom-Left (#C4C4C4, 748x671) -->
+            <div class="featured-item featured-b2l">
+              <div class="featured-rect rect-b2l"></div>
+              <div class="featured-links links-b2l">
+                <a href="#case-study" class="featured-link">
+                  <span>Read Case Study</span>
+                  <span class="featured-arrow">→</span>
+                </a>
+                <span class="featured-divider" aria-hidden="true"></span>
+                <a href="#live-site" class="featured-link">
+                  <span>view live site</span>
+                  <span class="featured-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column (3 Cards) -->
+          <div class="featured-col featured-col-right">
+            <!-- Card 4: Top-Right (#D9D9D9, 775x837) -->
+            <div class="featured-item featured-tr">
+              <div class="featured-rect rect-tr"></div>
+              <div class="featured-links links-tr">
+                <a href="#case-study" class="featured-link">
+                  <span>Read Case Study</span>
+                  <span class="featured-arrow">→</span>
+                </a>
+                <span class="featured-divider" aria-hidden="true"></span>
+                <a href="#live-site" class="featured-link">
+                  <span>view live site</span>
+                  <span class="featured-arrow">→</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 5: Middle-Right (#D9D9D9, 748x671) -->
+            <div class="featured-item featured-br">
+              <div class="featured-rect rect-br"></div>
+              <div class="featured-links links-br">
+                <a href="#case-study" class="featured-link">
+                  <span>Read Case Study</span>
+                  <span class="featured-arrow">→</span>
+                </a>
+                <span class="featured-divider" aria-hidden="true"></span>
+                <a href="#live-site" class="featured-link">
+                  <span>view live site</span>
+                  <span class="featured-arrow">→</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 6: Bottom-Right (#C4C4C4, 775x837) -->
+            <div class="featured-item featured-b2r">
+              <div class="featured-rect rect-b2r"></div>
+              <div class="featured-links links-b2r">
+                <a href="#case-study" class="featured-link">
+                  <span>Read Case Study</span>
+                  <span class="featured-arrow">→</span>
+                </a>
+                <span class="featured-divider" aria-hidden="true"></span>
+                <a href="#live-site" class="featured-link">
+                  <span>view live site</span>
+                  <span class="featured-arrow">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Two Identical 3-Column Project Grid Rows -->
+      <div class="body-inner-grid">
+        <!-- Row 1 -->
+        <div class="project-three-grid">
+          <!-- Column 1: alexiia -->
+          <article class="grid-project-card">
+            <div class="grid-project-thumb"></div>
+            <div class="grid-project-head">
+              <h3 class="grid-project-title">alexiia</h3>
+              <span class="grid-project-year">2025</span>
+            </div>
+            <p class="grid-project-desc">
+              <span class="desc-line">Designed Partyverse’s v1.0: a warm, widget-based</span>
+              <span class="desc-line">event</span>
+              <span class="desc-line">app that makes anyone feel like a planner. People</span>
+              <span class="desc-line">literally started hosting events just to use it.</span>
+            </p>
+            <div class="grid-project-links">
+              <a href="#case-study" class="grid-link grid-link-active">
+                <span>Read Case Study</span>
+                <span class="grid-arrow">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Column 2: Payday Cards -->
+          <article class="grid-project-card">
+            <div class="grid-project-thumb thumb-col2"></div>
+            <div class="grid-project-head head-col2">
+              <h3 class="grid-project-title">Payday Cards</h3>
+              <span class="grid-project-year">2023</span>
+            </div>
+            <p class="grid-project-desc desc-col2">
+              <span class="desc-line">Reimagined Payday’s Cards page from scratch,</span>
+              <span class="desc-line">translating their high-energy marketing into a web</span>
+              <span class="desc-line">experience that finally matched the brand.</span>
+            </p>
+            <div class="grid-project-links">
+              <span class="grid-link grid-link-locked">
+                <svg class="grid-lock-icon" viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                  <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"/>
+                </svg>
+                <span>Read Case Study</span>
+              </span>
+              <span class="grid-link-sep" aria-hidden="true"></span>
+              <a href="#live-site" class="grid-link grid-link-live">
+                <span>View Live Site</span>
+                <span class="grid-arrow-ne">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Column 3: Peer Virtual Cards -->
+          <article class="grid-project-card">
+            <div class="grid-project-thumb thumb-col3"></div>
+            <div class="grid-project-head head-col3">
+              <h3 class="grid-project-title">Peer Virtual Cards</h3>
+              <span class="grid-project-year">2025</span>
+            </div>
+            <p class="grid-project-desc">
+              <span class="desc-line">Introduced a new look to Peer’s ‘Virtual Cards’</span>
+              <span class="desc-line">interface,</span>
+              <span class="desc-line">designed to be more vibrant and built around how</span>
+              <span class="desc-line">users</span>
+              <span class="desc-line">actually spend everyday.</span>
+            </p>
+            <div class="grid-project-links">
+              <span class="grid-link grid-link-locked">
+                <svg class="grid-lock-icon" viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                  <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"/>
+                </svg>
+                <span>Read Case Study</span>
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Row 2 (Exact Duplicate as in BODY.png) -->
+        <div class="project-three-grid project-three-grid-row2">
+          <!-- Column 1: alexiia -->
+          <article class="grid-project-card">
+            <div class="grid-project-thumb"></div>
+            <div class="grid-project-head">
+              <h3 class="grid-project-title">alexiia</h3>
+              <span class="grid-project-year">2025</span>
+            </div>
+            <p class="grid-project-desc">
+              <span class="desc-line">Designed Partyverse’s v1.0: a warm, widget-based</span>
+              <span class="desc-line">event</span>
+              <span class="desc-line">app that makes anyone feel like a planner. People</span>
+              <span class="desc-line">literally started hosting events just to use it.</span>
+            </p>
+            <div class="grid-project-links">
+              <a href="#case-study" class="grid-link grid-link-active">
+                <span>Read Case Study</span>
+                <span class="grid-arrow">→</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Column 2: Payday Cards -->
+          <article class="grid-project-card">
+            <div class="grid-project-thumb thumb-col2"></div>
+            <div class="grid-project-head head-col2">
+              <h3 class="grid-project-title">Payday Cards</h3>
+              <span class="grid-project-year">2023</span>
+            </div>
+            <p class="grid-project-desc desc-col2">
+              <span class="desc-line">Reimagined Payday’s Cards page from scratch,</span>
+              <span class="desc-line">translating their high-energy marketing into a web</span>
+              <span class="desc-line">experience that finally matched the brand.</span>
+            </p>
+            <div class="grid-project-links">
+              <span class="grid-link grid-link-locked">
+                <svg class="grid-lock-icon" viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                  <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"/>
+                </svg>
+                <span>Read Case Study</span>
+              </span>
+              <span class="grid-link-sep" aria-hidden="true"></span>
+              <a href="#live-site" class="grid-link grid-link-live">
+                <span>View Live Site</span>
+                <span class="grid-arrow-ne">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Column 3: Peer Virtual Cards -->
+          <article class="grid-project-card">
+            <div class="grid-project-thumb thumb-col3"></div>
+            <div class="grid-project-head head-col3">
+              <h3 class="grid-project-title">Peer Virtual Cards</h3>
+              <span class="grid-project-year">2025</span>
+            </div>
+            <p class="grid-project-desc">
+              <span class="desc-line">Introduced a new look to Peer’s ‘Virtual Cards’</span>
+              <span class="desc-line">interface,</span>
+              <span class="desc-line">designed to be more vibrant and built around how</span>
+              <span class="desc-line">users</span>
+              <span class="desc-line">actually spend everyday.</span>
+            </p>
+            <div class="grid-project-links">
+              <span class="grid-link grid-link-locked">
+                <svg class="grid-lock-icon" viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                  <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6z"/>
+                </svg>
+                <span>Read Case Study</span>
+              </span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- 5. Video Projects Section (Matching Playground / Motion Reference Layout) -->
+      <div class="body-inner-videos" id="video-projects">
+        <div class="video-section-header">
+          <div class="video-section-badge">
+            <span class="video-badge-dot" aria-hidden="true"></span>
+            <h2 class="video-section-title">Video Projects</h2>
+          </div>
+          <p class="video-section-subtitle">
+            A home for my motion reels, product launch films, tiny prototypes, and the occasional “I wonder if I can animate that.”
+          </p>
+        </div>
+
+        <div class="video-projects-grid">
+          <!-- Video Project 1 -->
+          <article class="video-project-card">
+            <div class="video-project-stage">
+              <video class="video-project-el" autoplay loop muted playsinline preload="metadata"></video>
+            </div>
+
+            <h3 class="video-project-name">Build Your Own Puzzle</h3>
+            <p class="video-project-desc">
+              Originally started off as a fun interactive motion teaser for guest speakers at DND3.0; and now you can build your own puzzles and send to friends to put together.
+            </p>
+            <a href="#watch-byop" class="video-project-link">
+              <span>Visit Website</span>
+              <span class="video-link-arrow">↗</span>
+            </a>
+          </article>
+
+          <!-- Video Project 2 -->
+          <article class="video-project-card">
+            <div class="video-project-stage">
+              <video class="video-project-el" autoplay loop muted playsinline preload="metadata"></video>
+            </div>
+
+            <h3 class="video-project-name">Cash Cannon</h3>
+            <p class="video-project-desc">
+              I love adding fun fidgety-playthings in sites, especially in footers. This motion interaction was part of the PocketApp redesign, built to make every click feel rewarding.
+            </p>
+            <a href="#watch-cannon" class="video-project-link underline-active">
+              <span>Visit Website</span>
+              <span class="video-link-arrow">↗</span>
+            </a>
+          </article>
+
+          <!-- Video Project 3 -->
+          <article class="video-project-card">
+            <div class="video-project-stage">
+              <video class="video-project-el" autoplay loop muted playsinline preload="metadata"></video>
+            </div>
+
+            <h3 class="video-project-name">Partyverse Launch Film</h3>
+            <p class="video-project-desc">
+              High-energy 3D &amp; kinetic typography launch film introducing Partyverse v1.0 — blending tactile UI widgets, rhythmic sound design, and playful character motion.
+            </p>
+            <a href="#watch-partyverse" class="video-project-link">
+              <span>Watch Reel</span>
+              <span class="video-link-arrow">↗</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mosaic Section — Envelope (click the letter: it pops and the pieces burst out) -->
+    <section class="mosaic-section" id="mosaic" aria-label="Mosaic">
+      <div class="mosaic-canvas" id="mosaic-envelope">
+        <img src="assets/mosaic/envelope-front.svg" alt="" class="mosaic-layer mosaic-env-front" draggable="false">
+
+        <div class="mosaic-layer mosaic-letter">
+          <img src="assets/mosaic/letter.svg?v=2" alt="Mosaic — Every piece has a place. While these projects may not tell the whole story on their own, together they reveal the curiosity, craft, and growth behind my work." draggable="false">
+        </div>
+
+        <div class="mosaic-piece mosaic-piece-app">
+          <img src="Frame%20427321699.svg" alt="Rhordway — Travel Agency app store card" draggable="false">
+        </div>
+
+        <div class="mosaic-piece mosaic-piece-mark">
+          <img src="Vector.svg" alt="Brand mark" draggable="false">
+        </div>
+
+        <div class="mosaic-piece mosaic-piece-sticker">
+          <img src="image%202105.svg" alt="Comments 'N' Chaos Podcast sticker" draggable="false">
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Footer Section -->
+    <footer class="site-home-footer" id="site-footer" aria-label="Site Footer">
+      <div class="home-footer-inner">
+        <!-- Integrated UI Bar: Reduced CTA + Action + Copyright -->
+        <div class="home-footer-ui-bar">
+          <div class="home-footer-cta">
+            <p class="home-footer-heading">
+              Ready to bring your ideas to life? Let's connect and create something
+            </p>
+            <a href="mailto:workwithvittorio@gmail.com" class="home-footer-btn" aria-label="Get in touch via email">
+              <span>Get in touch</span>
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+                <path d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <p class="home-footer-copyright">© Copyright 2026</p>
+        </div>
+      </div>
+
+      <!-- Massive 2-Line Display Email (aligned @ with w, and .com with o) -->
+      <a href="mailto:workwithvittorio@gmail.com" class="home-footer-email-massive" aria-label="workwithvittorio@gmail.com">
+        <span class="home-footer-email-line home-footer-line-1">workwithvittorio</span>
+        <span class="home-footer-email-line home-footer-line-2">@gmail.com</span>
+      </a>
+    </footer>
+  </main>
+
+  <!-- /me Section View (Editorial Reading-Paced Typing UI) -->
+  <section class="me-view-section" id="me-view" aria-hidden="true">
+    <!-- Centered Editorial Typing Column -->
+    <div class="me-editorial-column">
+      <div class="me-typing-container" id="me-typing-container"></div>
+
+      <!-- Footer Connect Links -->
+      <div class="me-connect-links" id="me-connect-links">
+        <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="me-social-link">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+            <path d="M21.9 4.4c.2-.8-.5-1.4-1.2-1.1L2.6 10.3c-.8.3-.8 1.4.1 1.7l4.6 1.5 1.8 5.5c.2.7 1.1.9 1.6.4l2.6-2.6 4.6 3.4c.7.5 1.6.1 1.8-.7l2.2-15.1zM8.3 13.1l9.2-5.7c.2-.1.4.1.2.3l-7.6 6.9-.3 3.2-1.5-4.7z"/>
+          </svg>
+          <span>Telegram</span>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="me-social-link">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+            <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 1 0-.01-3.05 1.53 1.53 0 0 0 .01 3.05m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="mailto:workwithvittorio@gmail.com" class="me-social-link">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+          </svg>
+          <span>Email</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Staggered Overlapping Full-Screen Moving Slideshow Gallery Section -->
+    <div class="me-gallery-section" id="me-gallery-section" aria-hidden="true">
+      <div class="me-slideshow-track" id="me-slideshow-track">
+        <div class="me-collage-stage" id="me-collage-stage" aria-label="Pictures and video slideshow gallery">
+          <!-- Card 1: Far-Left Upper -->
+          <article class="me-collage-card card-slot-1" data-slot="0">
+            <div class="me-card-media-wrap">
+              <img src="assets/gallery/card_1.png" alt="IMG_0104.jpeg" class="me-card-img active-slide" draggable="false">
+              <img src="assets/avatar.png" alt="IMG_2137.jpeg" class="me-card-img" draggable="false">
+            </div>
+            <span class="me-card-caption">IMG_0104.jpeg</span>
+          </article>
+
+          <!-- Card 2: Far-Left Lower -->
+          <article class="me-collage-card card-slot-2" data-slot="1">
+            <div class="me-card-media-wrap">
+              <img src="assets/gallery/card_2.png" alt="IMG_0118.jpeg" class="me-card-img active-slide" draggable="false">
+              <img src="assets/gallery/card_6.png" alt="IMG_0241.jpeg" class="me-card-img" draggable="false">
+            </div>
+            <span class="me-card-caption">IMG_0118.jpeg</span>
+          </article>
+
+          <!-- Card 3: Left-Center Foreground Portrait -->
+          <article class="me-collage-card card-slot-3 is-video-card" data-slot="2">
+            <div class="me-card-media-wrap">
+              <img src="assets/gallery/card_3.png" alt="IMG_0142.jpeg" class="me-card-img active-slide" draggable="false">
+              <img src="assets/avatar.png" alt="IMG_2137.jpeg" class="me-card-img" draggable="false">
+            </div>
+            <span class="me-card-caption">IMG_0142.jpeg</span>
+          </article>
+
+          <!-- Card 4: Left-Center Tall Architecture -->
+          <article class="me-collage-card card-slot-4" data-slot="3">
+            <div class="me-card-media-wrap">
+              <img src="assets/gallery/card_4.png" alt="IMG_0189.jpeg" class="me-card-img active-slide" draggable="false">
+              <img src="assets/dp.png" alt="IMG_2045.jpeg" class="me-card-img" draggable="false">
+            </div>
+            <span class="me-card-caption">IMG_0189.jpeg</span>
+          </article>
+
+          <!-- Card 5: Center Upper Editorial -->
+          <article class="me-collage-card card-slot-5" data-slot="4">
+            <div class="me-card-media-wrap">
+              <img src="assets/gallery/card_5.png" alt="IMG_0215.jpeg" class="me-card-img active-slide" draggable="false">
+              <img src="assets/avatar_square.png" alt="IMG_2138.jpeg" class="me-card-img" draggable="false">
+            </div>
+            <span class="me-card-caption">IMG_0215.jpeg</span>
+          </article>
+
+          <!-- Card 6: Center Lower Motion Clip -->
+          <article class="me-collage-card card-slot-6 is-video-card" data-slot="5">
+            <div class="me-card-media-wrap">
+              <img src="assets/gallery/card_6.png" alt="IMG_0241.jpeg" class="me-card-img active-slide" draggable="false">
+              <img src="assets/gallery/card_11.png" alt="IMG_0392.jpeg" class="me-card-img" draggable="false">
+            </div>
+            <span class="me-card-caption">IMG_0241.jpeg</span>
+          </article>
+
+          <!-- Card 7: Center-Right Midground -->
+          <article class="me-collage-card card-slot-7" data-slot="6">
+            <div class="me-card-media-wrap">
+              <img src="assets/gallery/card_7.png" alt="IMG_0276.jpeg" class="me-card-img active-slide" draggable="false">
+              <img src="assets/gallery/card_1.png" alt="IMG_0104.jpeg" class="me-card-img" draggable="false">
+            </div>
+            <span class="me-card-caption">IMG_0276.jpeg</span>
+          </article>
+
+          <!-- Card 8: Right-Center Lower Desk & Code -->
+          <article class="me-collage-card card-slot-8" data-slot="7">
+            <div class="me-card-media-wrap">
+              <img src="assets/gallery/card_8.png" alt="IMG_0310.jpeg" class="me-card-img active-slide" draggable="false">
+              <img src="assets/avatar_square.png" alt="IMG_2138.jpeg" class="me-card-img" draggable="false">
+            </div>
+            <span class="me-card-caption">IMG_0310.jpeg</span>
+          </article>
+
+          <!-- Card 9: Right-Center Tall Hero Foreground -->
+          <article class="me-collage-card card-slot-9 is-video-card" data-slot="8">
+            <div class="me-card-media-wrap">
+              <img src="assets/gallery/card_9.png" alt="IMG_0348.jpeg" class="me-card-img active-slide" draggable="false">
+              <img src="assets/dp.png" alt="IMG_2045.jpeg" class="me-card-img" draggable="false">
+            </div>
+            <span class="me-card-caption">IMG_0348.jpeg</span>
+          </article>
+
+          <!-- Card 10: Far-Right Lower Foreground -->
+          <article class="me-collage-card card-slot-10" data-slot="9">
+            <div class="me-card-media-wrap">
+              <img src="assets/gallery/card_10.png" alt="IMG_0374.jpeg" class="me-card-img active-slide" draggable="false">
+              <img src="assets/gallery/card_5.png" alt="IMG_0215.jpeg" class="me-card-img" draggable="false">
+            </div>
+            <span class="me-card-caption">IMG_0374.jpeg</span>
+          </article>
+
+          <!-- Card 11: Far-Right Upper Background -->
+          <article class="me-collage-card card-slot-11 is-video-card" data-slot="10">
+            <div class="me-card-media-wrap">
+              <img src="assets/gallery/card_11.png" alt="IMG_0392.jpeg" class="me-card-img active-slide" draggable="false">
+              <img src="assets/gallery/card_4.png" alt="IMG_0189.jpeg" class="me-card-img" draggable="false">
+            </div>
+            <span class="me-card-caption">IMG_0392.jpeg</span>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- Centered Editorial Archive Column: Experience, GitHub, Articles & Viral Tweets on X -->
+    <div class="me-archive-section" id="me-archive-section" aria-hidden="true">
+      <div class="me-archive-column">
+
+        <!-- 1. Experience Block -->
+        <div class="me-sub-block">
+          <h3 class="me-block-title">Experience</h3>
+          <div class="me-exp-list">
+            <div class="me-exp-item">
+              <div class="me-exp-role">Design Engineer &amp; Brand Designer</div>
+              <div class="me-exp-meta">Independent Studio · 2025 – 2026</div>
+            </div>
+            <div class="me-exp-item">
+              <div class="me-exp-role">Product &amp; Brand Designer</div>
+              <div class="me-exp-meta">Hypergrowth &amp; Startup Teams · 2024 – 2026</div>
+            </div>
+            <div class="me-exp-item">
+              <div class="me-exp-role">UI/UX &amp; Motion Designer</div>
+              <div class="me-exp-meta">Cimpla Digital · 2023 – 2024</div>
+            </div>
+            <div class="me-exp-item">
+              <div class="me-exp-role">Junior UI/UX &amp; Brand Designer</div>
+              <div class="me-exp-meta">Ethereal Design Studio · 2023</div>
+            </div>
+            <div class="me-exp-item">
+              <div class="me-exp-role">UI/UX Design Intern</div>
+              <div class="me-exp-meta">GoPay · 2022 – 2023</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. GitHub Contribution Graph Block -->
+        <div class="me-sub-block">
+          <div class="me-block-header-row">
+            <h3 class="me-block-title">GitHub</h3>
+            <span class="me-block-meta">2,415 contributions in the last year</span>
+          </div>
+
+          <div class="me-gh-card">
+            <div class="me-gh-months" aria-hidden="true">
+              <span>Dec</span>
+              <span>Jan</span>
+              <span>Feb</span>
+              <span>Mar</span>
+              <span>Apr</span>
+              <span>May</span>
+              <span>Jun</span>
+              <span>Jul</span>
+              <span>Aug</span>
+              <span>Sep</span>
+              <span>Oct</span>
+            </div>
+
+            <div class="me-gh-grid" id="me-gh-grid" role="img" aria-label="GitHub contribution graph showing 2,415 contributions in the last year"></div>
+
+            <div class="me-gh-footer">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="me-gh-handle">@0xvitt</a>
+              <div class="me-gh-legend" aria-hidden="true">
+                <span>Less</span>
+                <span class="me-gh-cell level-0"></span>
+                <span class="me-gh-cell level-1"></span>
+                <span class="me-gh-cell level-2"></span>
+                <span class="me-gh-cell level-3"></span>
+                <span class="me-gh-cell level-4"></span>
+                <span>More</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Articles Written Block -->
+        <div class="me-sub-block">
+          <div class="me-block-header-row">
+            <h3 class="me-block-title">Articles</h3>
+            <span class="me-block-meta">Thoughts on design, code &amp; craft</span>
+          </div>
+
+          <div class="me-articles-list">
+            <a href="#article-1" class="me-article-item">
+              <div class="me-article-main">
+                <div class="me-article-title">Why Design Engineers Are Shaping the Next Era of Software</div>
+                <div class="me-article-meta">Substack · Oct 2026 · 5 min read</div>
+              </div>
+              <span class="me-article-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a href="#article-2" class="me-article-item">
+              <div class="me-article-main">
+                <div class="me-article-title">Designing Interfaces That Feel Physical: Micro-Interactions &amp; Sound</div>
+                <div class="me-article-meta">Medium · Aug 2026 · 6 min read</div>
+              </div>
+              <span class="me-article-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a href="#article-3" class="me-article-item">
+              <div class="me-article-main">
+                <div class="me-article-title">From Brand Identity to Production Code: Closing the Handoff Gap</div>
+                <div class="me-article-meta">Personal Notes · May 2026 · 4 min read</div>
+              </div>
+              <span class="me-article-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a href="#article-4" class="me-article-item">
+              <div class="me-article-main">
+                <div class="me-article-title">The Art of Restraint in Minimalist Product &amp; Web Design</div>
+                <div class="me-article-meta">Medium · Jan 2026 · 5 min read</div>
+              </div>
+              <span class="me-article-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Most Viral Tweets on X Block -->
+        <div class="me-sub-block">
+          <div class="me-block-header-row">
+            <h3 class="me-block-title">Most Viral on X</h3>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="me-block-meta me-block-meta-link">@0xvitt ↗</a>
+          </div>
+
+          <div class="me-tweets-list">
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="me-tweet-card">
+              <div class="me-tweet-head">
+                <div class="me-tweet-author">
+                  <img src="assets/avatar_square.png" alt="Vittorio" class="me-tweet-avatar">
+                  <div class="me-tweet-author-info">
+                    <span class="me-tweet-name">Vittorio</span>
+                    <span class="me-tweet-handle">@0xvitt</span>
+                  </div>
+                </div>
+                <svg class="me-tweet-x-icon" viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </div>
+              <p class="me-tweet-body">Obsessing over the tiny details nobody consciously notices — a 180ms spring curve, a tactile switch click on theme toggle, typography that breathes. That’s the difference between software people use and software people love.</p>
+              <div class="me-tweet-stats">
+                <span>14.2K Likes</span>
+                <span>·</span>
+                <span>2.8K Bookmarks</span>
+                <span>·</span>
+                <span>480K Views</span>
+              </div>
+            </a>
+
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="me-tweet-card">
+              <div class="me-tweet-head">
+                <div class="me-tweet-author">
+                  <img src="assets/avatar_square.png" alt="Vittorio" class="me-tweet-avatar">
+                  <div class="me-tweet-author-info">
+                    <span class="me-tweet-name">Vittorio</span>
+                    <span class="me-tweet-handle">@0xvitt</span>
+                  </div>
+                </div>
+                <svg class="me-tweet-x-icon" viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </div>
+              <p class="me-tweet-body">Being a designer who can write production code is a superpower. You stop designing static pictures of software and start designing how the product actually feels in motion.</p>
+              <div class="me-tweet-stats">
+                <span>9.6K Likes</span>
+                <span>·</span>
+                <span>1.9K Bookmarks</span>
+                <span>·</span>
+                <span>310K Views</span>
+              </div>
+            </a>
+
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="me-tweet-card">
+              <div class="me-tweet-head">
+                <div class="me-tweet-author">
+                  <img src="assets/avatar_square.png" alt="Vittorio" class="me-tweet-avatar">
+                  <div class="me-tweet-author-info">
+                    <span class="me-tweet-name">Vittorio</span>
+                    <span class="me-tweet-handle">@0xvitt</span>
+                  </div>
+                </div>
+                <svg class="me-tweet-x-icon" viewBox="0 0 24 24" width="13" height="13" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </div>
+              <p class="me-tweet-body">Your portfolio shouldn’t look like a generic template. It should feel like stepping right into your studio — your taste, your rhythm, your craft all in one place.</p>
+              <div class="me-tweet-stats">
+                <span>7.4K Likes</span>
+                <span>·</span>
+                <span>1.5K Bookmarks</span>
+                <span>·</span>
+                <span>225K Views</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. Bottom Personal Footer (Matching Reference Layout) -->
+        <footer class="me-bottom-footer">
+          <div class="me-footer-col me-footer-identity">
+            <div class="me-footer-name">Vittorio</div>
+            <div class="me-footer-loc">Lagos (Nigeria)</div>
+            <div class="me-footer-time" id="me-live-clock">05:02 (WAT, GMT+1)</div>
+          </div>
+
+          <div class="me-footer-col me-footer-listening">
+            <div class="me-footer-label">Listening to:</div>
+            <div class="me-listening-row">
+              <span class="me-vinyl-disc" id="me-vinyl-disc" aria-hidden="true">
+                <span class="me-vinyl-core"></span>
+              </span>
+              <span class="me-listening-text" id="me-listening-status">Not Playing</span>
+            </div>
+          </div>
+
+          <div class="me-footer-col me-footer-connect">
+            <div class="me-footer-label">Connect with me on:</div>
+            <div class="me-footer-socials">
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="me-footer-icon">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="me-footer-icon">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.53 1.53 0 1 0-.01-3.05 1.53 1.53 0 0 0 .01 3.05m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+                </svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="me-footer-icon">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                  <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+                </svg>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="me-footer-icon">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                  <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js?v=31"></script>
+  <script>
+    if (typeof initPortfolioHero === 'function' && !window.__vittorioHeroInitialized) {
+      initPortfolioHero();
+    }
+  </script>
+</body>
+</html>
