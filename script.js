@@ -1183,6 +1183,31 @@ function initPortfolioHero() {
   if (window.location.hash === '#capitall' || window.location.hash === '#case-study') {
     window.location.href = 'capitall.html';
   }
+
+  /* ==========================================================================
+     10. Thumbnail Video Autoplay Assurance
+     ========================================================================== */
+  const thumbVideo = document.querySelector('.capitall-thumb-video');
+  if (thumbVideo) {
+    thumbVideo.muted = true;
+    const tryPlay = () => {
+      const p = thumbVideo.play();
+      if (p && typeof p.catch === 'function') {
+        p.catch(() => {
+          const userPlay = () => {
+            thumbVideo.play();
+            window.removeEventListener('click', userPlay);
+            window.removeEventListener('touchstart', userPlay);
+            window.removeEventListener('scroll', userPlay);
+          };
+          window.addEventListener('click', userPlay, { once: true });
+          window.addEventListener('touchstart', userPlay, { once: true });
+          window.addEventListener('scroll', userPlay, { once: true });
+        });
+      }
+    };
+    tryPlay();
+  }
 }
 
 if (document.readyState === 'loading') {
