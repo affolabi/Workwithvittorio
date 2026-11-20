@@ -3204,16 +3204,16 @@ button.featured-link-btn {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--cs-media-gap);
+  align-items: start;
 }
 
 .cs-media--half {
-  aspect-ratio: 4 / 3;
+  width: 100%;
 }
 
 .cs-media--half img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
 }
 
@@ -3225,6 +3225,34 @@ button.featured-link-btn {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* Dedicated Presentation Slide Styles */
+.cs-media--slide {
+  width: 100%;
+  background: #F8F8FA;
+}
+
+[data-theme="dark"] .cs-media--slide {
+  background: #111216;
+}
+
+/* Dedicated Rollup Standee Showcase */
+.cs-media--banner {
+  max-width: 480px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.cs-media--banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cs-media--dark-backdrop {
+  background: #0B0C0E !important;
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Case End / Footer CTA */
