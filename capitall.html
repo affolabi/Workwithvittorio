@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capitall — Brand & Phygital Distribution Case Study | Vittorio</title>
+  <meta name="description" content="Brand strategy, visual identity, and phygital distribution network turning word-of-mouth recommendations into instant rewards across Africa.">
+  <link rel="icon" type="image/png" href="assets/flame.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=52">
+</head>
+<body class="case-study-page-body" data-theme="light">
+
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('vittorio_theme') || 'light';
+        document.body.setAttribute('data-theme', saved);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Sticky Minimal Header -->
+  <header class="cs-nav-header">
+    <div class="cs-nav-container">
+      <div class="cs-nav-left">
+        <a href="index.html#works" class="cs-nav-back">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Back to Work</span>
+        </a>
+      </div>
+
+      <nav class="cs-nav-center" aria-label="Breadcrumb">
+        <a href="index.html#home" class="cs-crumb">vittorio</a>
+        <span class="cs-crumb-sep">/</span>
+        <a href="index.html#works" class="cs-crumb">work</a>
+        <span class="cs-crumb-sep">/</span>
+        <span class="cs-crumb current">capitall</span>
+      </nav>
+
+      <div class="cs-nav-right">
+        <!-- Light / Dark Switch -->
+        <div class="cs-theme-switcher" role="group" aria-label="Color theme">
+          <button type="button" class="cs-theme-btn" id="cs-theme-light" data-choice="light">LIGHT</button>
+          <span class="cs-theme-slash" aria-hidden="true">/</span>
+          <button type="button" class="cs-theme-btn" id="cs-theme-dark" data-choice="dark">DARK</button>
+        </div>
+
+        <!-- Social Links -->
+        <div class="cs-social-row">
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="cs-social-icon" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="cs-social-icon" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/>
+            </svg>
+          </a>
+          <a href="https://github.com/affolabi/Workwithvittorio" target="_blank" rel="noopener noreferrer" class="cs-social-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Media: Full Width Wide Banner -->
+  <section class="cs-hero" aria-label="Project Hero Media">
+    <div class="cs-media cs-media--hero">
+      <video id="cs-hero-video" autoplay muted loop playsinline preload="auto">
+        <source src="assets/projects/capitall/thumbnail.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="cs-video-toggle" id="cs-video-toggle-btn" aria-label="Pause Video" title="Play / Pause">
+        <svg class="cs-icon-pause" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+          <rect x="6" y="4" width="4" height="16" rx="1"></rect>
+          <rect x="14" y="4" width="4" height="16" rx="1"></rect>
+        </svg>
+        <svg class="cs-icon-play" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:none;">
+          <polygon points="6 4 20 12 6 20 6 4"></polygon>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- 2-Column Main Case Study Layout -->
+  <main class="cs-layout">
+
+    <!-- Sticky Left Summary Column -->
+    <aside class="cs-summary" aria-label="Project Summary">
+      <div class="cs-summary-header">
+        <h1 class="cs-summary-title">Capitall</h1>
+        <p class="cs-summary-tagline">A phygital distribution network turning word-of-mouth recommendations into instant rewards across Africa.</p>
+      </div>
+
+      <dl class="cs-meta-dl">
+        <div class="cs-meta-item">
+          <dt>Year</dt>
+          <dd>2026</dd>
+        </div>
+        <div class="cs-meta-item">
+          <dt>Role</dt>
+          <dd>Brand Strategist · Visual Identity Designer</dd>
+        </div>
+        <div class="cs-meta-item">
+          <dt>Disciplines</dt>
+          <dd>Brand Strategy · Visual Identity · Phygital Experience · Creative Direction</dd>
+        </div>
+        <div class="cs-meta-item">
+          <dt>Client</dt>
+          <dd>Capitall</dd>
+        </div>
+      </dl>
+
+      <div class="cs-summary-actions">
+        <a href="https://capitall-three.vercel.app" target="_blank" rel="noopener noreferrer" class="cs-action-btn primary">
+          <span>View Live Site</span>
+          <span class="cs-arrow">↗</span>
+        </a>
+        <a href="index.html#works" class="cs-action-btn secondary">
+          <span>← Back to all projects</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Right Flowing Editorial Story Column -->
+    <article class="cs-content">
+
+      <!-- Case Intro Hook -->
+      <header class="cs-intro">
+        <h2 class="cs-intro-heading">What if your money app felt a little less like banking, and a lot more like real life?</h2>
+        <div class="cs-intro-text">
+          <p>Across emerging African markets, informal recommendations drive over 80% of retail transactions—yet the individuals driving that volume receive zero attribution. Capitall reimagines this grassroots dynamic by giving everyday people the tools to earn commissions through simple digital links and physical NFC cards.</p>
+        </div>
+      </header>
+
+      <!-- Section: The Challenge -->
+      <section class="cs-section" id="challenge">
+        <p class="cs-section-label">The Challenge</p>
+        <div class="cs-section-copy">
+          <h2 class="cs-section-heading">The dilemma wasn't lack of demand. It was the friction of traditional capital.</h2>
+          <p>Traditional distribution in Africa requires heavy startup capital: purchasing bulk inventory, renting warehouse or retail space, and bearing 100% of the unsold stock risk. This reality excludes millions of ambitious young people from participating in the retail value chain.</p>
+          <p>Meanwhile, consumer brands struggle with hyper-local awareness and last-mile consumer trust. The dilemma wasn't that people didn't want to sell or buy—it was that the economic bridge between brands and everyday distributors was broken.</p>
+        </div>
+      </section>
+
+      <!-- Media Pair 1: Strategy + Logo Rationale -->
+      <div class="cs-media-pair">
+        <div class="cs-media cs-media--half">
+          <img src="assets/projects/capitall/strategy.png" alt="Capitall Strategy Framework" loading="lazy">
+        </div>
+        <div class="cs-media cs-media--half">
+          <img src="assets/projects/capitall/rationale.png" alt="Capitall Logo Geometry Rationale" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Section: The Idea -->
+      <section class="cs-section" id="idea">
+        <p class="cs-section-label">The Idea</p>
+        <div class="cs-section-copy">
+          <h2 class="cs-section-heading">“There is Reward in Sharing” — Turning cultural habit into economic fuel.</h2>
+          <p>In West Africa, the idiom <em>“There is Love in Sharing”</em> is woven into everyday language. People recommend delicious meals, reliable mechanics, and great products freely. We elevated this instinct into an empowering commercial premise: <strong>There is Reward in Sharing</strong>.</p>
+          <p>By establishing <em>“You Don’t Need Capital To Earn On CAPITALL”</em>, we eliminated the psychological intimidation of starting a business. You don't need inventory or warehousing; your existing community and social capital are all the leverage you need.</p>
+        </div>
+      </section>
+
+      <!-- Full-Width Media: Mobile App Mockup -->
+      <div class="cs-media cs-media--full">
+        <img src="assets/projects/capitall/mockup.png" alt="Capitall Mobile Platform Experience" loading="lazy">
+      </div>
+
+      <!-- Section: The Mechanism -->
+      <section class="cs-section" id="mechanism">
+        <p class="cs-section-label">The Engine</p>
+        <div class="cs-section-copy">
+          <h2 class="cs-section-heading">Phygital distribution: digital attribution meets physical street-level tap.</h2>
+          <p>African commerce doesn't happen strictly inside a mobile browser. It lives across markets, university hostels, campus cafeterias, and neighborhood corners. A purely digital platform would miss 70% of real-world interactions.</p>
+          <p>We designed an integrated phygital pipeline: Brands <strong>List</strong> products; Micro-distributors <strong>Join</strong> with zero upfront fees; they <strong>Share</strong> via personalized web links or by physically tapping NFC smart cards against customers' smartphones; the network <strong>Verifies</strong> the conversion; and commissions are instantly <strong>Rewarded</strong> to digital wallets.</p>
+        </div>
+      </section>
+
+      <!-- Media Pair 2: Hawker Poster + Pop-Up Booth -->
+      <div class="cs-media-pair">
+        <div class="cs-media cs-media--half">
+          <img src="assets/projects/capitall/poster-hawker.png" alt="I Hawked So You Can Tap Poster" loading="lazy">
+        </div>
+        <div class="cs-media cs-media--half">
+          <img src="assets/projects/capitall/booth.png" alt="Capitall Experiential Pop-up Booth" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Section: Visual Identity -->
+      <section class="cs-section" id="identity">
+        <p class="cs-section-label">Visual Identity</p>
+        <div class="cs-section-copy">
+          <h2 class="cs-section-heading">Designed for the street, refined for institutional capital.</h2>
+          <p>The visual identity needed to communicate across extreme contexts: from roadside posters under the Lagos sun to investment presentations in London. We anchored the brand in electric lilac, luminous chalk white, and deep carbon black.</p>
+          <p>The mark fuses bidirectional exchange arrows with upward compounding velocity curves, representing the reciprocal growth between brands and their community distributors.</p>
+        </div>
+      </section>
+
+      <!-- Media Pair 3: Rollup Banner + Staff Merch -->
+      <div class="cs-media-pair">
+        <div class="cs-media cs-media--half">
+          <img src="assets/projects/capitall/rollup.png" alt="Distributor 85x200cm Rollup Banner" loading="lazy">
+        </div>
+        <div class="cs-media cs-media--half">
+          <img src="assets/projects/capitall/shirt.png" alt="Capitall Streetwear Staff Tees" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Media Pair 4: Water Bottle + Stickers -->
+      <div class="cs-media-pair">
+        <div class="cs-media cs-media--half">
+          <img src="assets/projects/capitall/bottle.png" alt="Capitall Branded Water Bottle" loading="lazy">
+        </div>
+        <div class="cs-media cs-media--half">
+          <img src="assets/projects/capitall/stickers.png" alt="Capitall Die-Cut Sticker Pack" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Full-Width Media: Viral Meme Campaign -->
+      <div class="cs-media cs-media--full">
+        <img src="assets/projects/capitall/meme.png" alt="Capitall Cultural Meme Engine" loading="lazy">
+      </div>
+
+      <!-- Case End / Live CTA -->
+      <footer class="cs-end">
+        <div class="cs-end-content">
+          <div class="cs-end-left">
+            <span class="cs-section-label">Live Platform</span>
+            <h2 class="cs-end-heading">Experience Capitall</h2>
+            <p class="cs-end-desc">Explore the live web application and platform rollout.</p>
+          </div>
+          <div class="cs-end-right">
+            <a href="https://capitall-three.vercel.app" target="_blank" rel="noopener noreferrer" class="cs-action-btn primary large">
+              <span>Visit capitall-three.vercel.app</span>
+              <span class="cs-arrow">↗</span>
+            </a>
+            <a href="index.html#works" class="cs-action-btn secondary">
+              <span>Explore more projects</span>
+              <span class="cs-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </footer>
+
+    </article>
+  </main>
+
+  <script>
+    // Theme Switcher Sync with Vittorio's Portfolio
+    const lightBtn = document.getElementById('cs-theme-light');
+    const darkBtn = document.getElementById('cs-theme-dark');
+
+    function updateThemeButtons(theme) {
+      if (theme === 'dark') {
+        darkBtn.classList.add('active');
+        lightBtn.classList.remove('active');
+      } else {
+        lightBtn.classList.add('active');
+        darkBtn.classList.remove('active');
+      }
+    }
+
+    function setTheme(theme) {
+      document.body.setAttribute('data-theme', theme);
+      try {
+        localStorage.setItem('vittorio_theme', theme);
+      } catch(e) {}
+      updateThemeButtons(theme);
+    }
+
+    const currentTheme = document.body.getAttribute('data-theme') || 'light';
+    updateThemeButtons(currentTheme);
+
+    if (lightBtn) lightBtn.addEventListener('click', () => setTheme('light'));
+    if (darkBtn) darkBtn.addEventListener('click', () => setTheme('dark'));
+
+    // Video Play / Pause Toggle
+    const heroVideo = document.getElementById('cs-hero-video');
+    const videoToggleBtn = document.getElementById('cs-video-toggle-btn');
+    const playIcon = videoToggleBtn ? videoToggleBtn.querySelector('.cs-icon-play') : null;
+    const pauseIcon = videoToggleBtn ? videoToggleBtn.querySelector('.cs-icon-pause') : null;
+
+    if (videoToggleBtn && heroVideo) {
+      videoToggleBtn.addEventListener('click', () => {
+        if (heroVideo.paused) {
+          heroVideo.play();
+          if (playIcon) playIcon.style.display = 'none';
+          if (pauseIcon) pauseIcon.style.display = 'block';
+          videoToggleBtn.setAttribute('aria-label', 'Pause Video');
+        } else {
+          heroVideo.pause();
+          if (playIcon) playIcon.style.display = 'block';
+          if (pauseIcon) pauseIcon.style.display = 'none';
+          videoToggleBtn.setAttribute('aria-label', 'Play Video');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

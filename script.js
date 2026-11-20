@@ -1178,99 +1178,10 @@ function initPortfolioHero() {
   window.addEventListener('resize', alignFooterEmail);
 
   /* ==========================================================================
-     9. Capitall Case Study Modal Engine
+     9. Capitall Case Study Hash Redirect
      ========================================================================== */
-  const capitallModal = document.getElementById('capitall-modal');
-  const openCapitallTriggers = document.querySelectorAll('[data-open-modal="capitall"]');
-  const closeCapitallTriggers = document.querySelectorAll('[data-close-modal="capitall"]');
-  const capitallVideo = document.getElementById('capitall-main-video');
-  const playBtn = document.getElementById('capitall-play-btn');
-  const soundBtn = document.getElementById('capitall-sound-btn');
-
-  function openCapitallModal() {
-    if (!capitallModal) return;
-    capitallModal.classList.add('is-open');
-    capitallModal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-
-    if (capitallVideo) {
-      capitallVideo.play().catch(() => {});
-    }
-  }
-
-  function closeCapitallModal() {
-    if (!capitallModal) return;
-    capitallModal.classList.remove('is-open');
-    capitallModal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-
-    if (capitallVideo) {
-      capitallVideo.pause();
-    }
-    if (window.location.hash === '#capitall' || window.location.hash === '#case-study') {
-      history.replaceState(null, '', window.location.pathname);
-    }
-  }
-
-  openCapitallTriggers.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openCapitallModal();
-    });
-    btn.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openCapitallModal();
-      }
-    });
-  });
-
-  closeCapitallTriggers.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      closeCapitallModal();
-    });
-  });
-
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && capitallModal && capitallModal.classList.contains('is-open')) {
-      closeCapitallModal();
-    }
-  });
-
-  if (playBtn && capitallVideo) {
-    playBtn.addEventListener('click', () => {
-      const icon = playBtn.querySelector('.cs-play-icon');
-      const label = playBtn.querySelector('.cs-play-label');
-      if (capitallVideo.paused) {
-        capitallVideo.play().catch(() => {});
-        if (icon) icon.textContent = '❚❚';
-        if (label) label.textContent = 'Pause';
-      } else {
-        capitallVideo.pause();
-        if (icon) icon.textContent = '▶';
-        if (label) label.textContent = 'Play';
-      }
-    });
-  }
-
-  if (soundBtn && capitallVideo) {
-    soundBtn.addEventListener('click', () => {
-      const icon = soundBtn.querySelector('.cs-sound-icon');
-      const label = soundBtn.querySelector('.cs-sound-label');
-      capitallVideo.muted = !capitallVideo.muted;
-      if (capitallVideo.muted) {
-        if (icon) icon.textContent = '🔇';
-        if (label) label.textContent = 'Unmute';
-      } else {
-        if (icon) icon.textContent = '🔊';
-        if (label) label.textContent = 'Mute';
-      }
-    });
-  }
-
-  if (window.location.hash === '#capitall') {
-    setTimeout(openCapitallModal, 400);
+  if (window.location.hash === '#capitall' || window.location.hash === '#case-study') {
+    window.location.href = 'capitall.html';
   }
 }
 
